@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #172033;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.page-width {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.site-header {
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.site-header__inner {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.site-nav a {
+  text-decoration: none;
+}
+
+.hero-ecomlab {
+  min-height: 520px;
+  display: grid;
+  align-items: center;
+  background: linear-gradient(135deg, #f3f6fb, #ffffff);
+}
+
+.hero-ecomlab__content {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.hero-ecomlab__eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-ecomlab h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 1.05;
+}
+
+.hero-ecomlab__text {
+  max-width: 680px;
+  margin: 24px 0 32px;
+  font-size: 1.15rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 8px;
+  background: #172033;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-footer {
+  padding: 32px 0;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .site-header__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
