@@ -1,0 +1,49 @@
+<section class="hero-ecomlab">
+  <div class="page-width hero-ecomlab__content">
+    <p class="hero-ecomlab__eyebrow">Laboratorio de comercio electrónico</p>
+    <h1>{{ section.settings.heading }}</h1>
+    <p class="hero-ecomlab__text">{{ section.settings.text }}</p>
+
+    {% if section.settings.button_label != blank %}
+      <a class="button" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">
+        {{ section.settings.button_label }}
+      </a>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Portada EcomLab",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título",
+      "default": "Tecnología y accesorios para estudiar, trabajar y crear"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Texto",
+      "default": "Una tienda demostrativa para aprender cómo funciona el comercio electrónico desde la experiencia del cliente hasta la gestión del negocio."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Texto del botón",
+      "default": "Ver productos"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Portada EcomLab"
+    }
+  ]
+}
+{% endschema %}
