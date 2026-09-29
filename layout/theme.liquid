@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <title>
+      {{ page_title }}
+      {% if current_tags %} – {{ current_tags | join: ', ' }}{% endif %}
+      {% if current_page != 1 %} – Página {{ current_page }}{% endif %}
+      {% unless page_title contains shop.name %} – {{ shop.name }}{% endunless %}
+    </title>
+
+    {{ content_for_header }}
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="page-width site-header__inner">
+        <a class="site-logo" href="{{ routes.root_url }}">EcomLab Store</a>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="{{ routes.root_url }}">Inicio</a>
+          <a href="{{ routes.all_products_collection_url }}">Tienda</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="MainContent" role="main">
+      {{ content_for_layout }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-width">
+        <p><strong>EcomLab Store</strong> · Tienda demostrativa con fines educativos.</p>
+      </div>
+    </footer>
+  </body>
+</html>
