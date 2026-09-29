@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-ecomlab",
+      "settings": {
+        "heading": "Tecnología y accesorios para estudiar, trabajar y crear",
+        "text": "Una tienda demostrativa para aprender cómo funciona el comercio electrónico desde la experiencia del cliente hasta la gestión del negocio.",
+        "button_label": "Ver productos"
+      }
+    }
+  },
+  "order": ["hero"]
+}
